@@ -1,0 +1,17 @@
+body {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: greenyellow;
+}
+
+#paragraph-result {
+  margin: 50px;
+}
+
+input {
+  width: 100px;
+}
+
+label {
+  font-family: monospace;
+}
