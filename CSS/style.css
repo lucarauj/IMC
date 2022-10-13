@@ -1,11 +1,23 @@
 body {
-  padding: 10px;
+  padding: 20px;
+  text-align: left;
+  margin-left: 150px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: greenyellow;
+  background-image: url("https://raw.githubusercontent.com/lucarauj/assets/main/Imc.jpg");
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: top center, center;
+  background-color:lightpink;
 }
 
 #paragraph-result {
   margin: 50px;
+  font-weight: bold;
+}
+
+#result {
+  margin: 50px;
+  font-weight: bold;
 }
 
 input {
@@ -13,5 +25,13 @@ input {
 }
 
 label {
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#button-calculate-imc {
+  visibility: hidden;
+}
+
+#imc-result-faixa {
+  background-color: yellow;
 }
