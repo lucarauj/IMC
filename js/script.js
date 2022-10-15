@@ -1,3 +1,4 @@
+
 function start() {
   var buttonCalculateIMC = document.querySelector('#button-calculate-imc');
   buttonCalculateIMC.addEventListener('click', handleButtonClick);
@@ -5,14 +6,20 @@ function start() {
   var inputWeight = document.querySelector('#input-weight');
   var inputHeight = document.querySelector('#input-height');
 
-  inputWeight.addEventListener('input', handleButtonClick);
-  inputHeight.addEventListener('input', handleButtonClick);
+  //inputWeight.addEventListener('input', handleButtonClick);
+  //inputHeight.addEventListener('input', handleButtonClick);
 
   handleButtonClick();
 }
 
 function calculateIMC(weight, height) {
-  return weight / (height * height);
+
+  if (weight != null & height != null) {
+    return weight / (height * height);
+  } else {
+    return null;
+  }
+
 }
 
 function handleButtonClick() {
@@ -20,6 +27,8 @@ function handleButtonClick() {
   var inputHeight = document.querySelector('#input-height');
   var imcResult = document.querySelector('#imc-result');
   var imcResultFaixa = document.querySelector('#imc-result-faixa');
+  var imcCalculapeso = document.querySelector('#imc-calcula-peso');
+  
 
   var weight = Number(inputWeight.value);
   var height = Number(inputHeight.value);
@@ -34,6 +43,7 @@ function handleButtonClick() {
   imcResult.textContent = formattedImc;
   calculaFaixa(formattedImc);
   imcResultFaixa.textContent = calculaFaixa(imc);
+  imcCalculapeso.textContent = calculaPeso(imc, weight, height);
 }
 
 function calculaFaixa(imc) {
@@ -52,8 +62,26 @@ function calculaFaixa(imc) {
   } else if (imc > 40.0) {
     return 'Obesidade grau III';
   } else {
-    return 'Inválido';
+    return null;
+  }
+}
+
+
+function calculaPeso(imc, weight, height) {
+  
+  var pesoMinimo = 18.5 * Math.pow(height, 2);
+  var pesoMaximo = 24.9 * Math.pow(height, 2);
+
+  if (imc <= 18.4) {
+    var pesoAbaixo = pesoMinimo - weight;
+    return ", " + pesoAbaixo.toFixed(2) + " kg abaixo do IMC normal."
+  } else if (imc > 24.9) {
+    var pesoAcima = weight - pesoMaximo;
+    return ", " + pesoAcima.toFixed(2) + " kg acima do IMC normal." 
+  } else {
+    return null
   }
 }
 
 start();
+
