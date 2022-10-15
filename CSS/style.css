@@ -13,10 +13,6 @@ html {
   background-color: rgb(168, 47, 66);
 }
 
-#button-calculate-imc {
-  visibility: hidden;
-}
-
 a {
   color: unset;
   text-decoration: none;
@@ -59,6 +55,7 @@ header {
 
 #paragraph-result{
   margin-top: 15px;
+  font-weight:bold;
 }
 
 #imc-result {
@@ -74,25 +71,30 @@ header {
   font-family: Roboto, sans-serif;
   font-weight: bold;
   font-size: 20px;
+  width: 100px;
+  height: 40px;
+  
 }
 
 #input-height {
   font-family: Roboto, sans-serif;
   font-weight: bold;
   font-size: 20px;
+  width: 105px;
+  height: 40px;
 }
 
 
 .imc-card {
   background-color: #25070f;
   border-radius: 10px;
-  padding: 30px 10px;
+  padding: 30px 30px;
   margin-bottom: 20px;
 }
 
 .imc-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -103,4 +105,24 @@ header {
 
 #label {
   margin-bottom: 20px;
+}
+
+#imc-result {
+  visibility: hidden;
+}
+
+#button-calculate-imc {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  
+}
+
+#imc-calcula-peso {
+  font-weight:bold;;
 }
