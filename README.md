@@ -13,6 +13,7 @@ A Calculadora IMC foi um projeto iniciado em um Minicamp Dev & Data da Faculdade
 - HTML <img align="center" alt="Lucarauj-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
 - CSS <img align="center" alt="Lucarauj-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 - JS <img align="center" alt="Lucarauj-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+- Netlify <img align="center" alt="Lucarauj-Netlify" height="20" width="80" src="https://github.com/lucarauj/assets/blob/main/Netlify.png">
 
 ## Autor
 
